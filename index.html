@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Remover</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="#commentRemover">Comment Remover</a>
+        <a href="#gradientGener">CSS Gradient Generator</a>
+        <a href="#formattere    ">HTML Formatter</a>
+        <a href="#about">About</a>
+        <p id="credits1">Made by Atharv for High Seas</p>
+      </div>
+      <div id="commentRemover">
+    <br>
+    <h1>Comment Remover</h1>
+    <label for="codeInput">Paste your code here:</label>
+    <textarea style="width: 99%;" id="codeInput" placeholder="Enter your code..."></textarea>
+    <div class="presets">
+        <label>Presets:</label>
+        <button onclick="setPreset('JavaScript')">JavaScript</button>
+        <button onclick="setPreset('Python')">Python</button>
+        <button onclick="setPreset('C')">C/C++</button>
+        <button onclick="setPreset('HTML')">HTML</button>
+    </div>
+    <div class="controls">
+        <label for="startMarker">Start Comment:</label>
+        <input id="startMarker" type="text" placeholder="e.g., // or /*">
+        <label for="endMarker">End Comment:</label>
+        <input id="endMarker" type="text" placeholder="e.g., \n or */">
+        <button onclick="removeComments()">Remove Comments</button>
+        <p style="color: #b2b2b2"><i>Note: \n means a new line such as JavaScript comments!</i></p>
+    </div>
+
+    <div class="output">
+        <label for="outputArea">Output without comments:</label>
+        <br>
+        <br>
+        <div class="text-wrap">
+            <textarea id="outputArea" readonly></textarea>
+            <div id="copyToClipboard-a" class="clipboard icon"></div>
+        </div>
+    </div>
+    </div>
+    <br>
+    <br>
+    <hr id="gradientGener">
+    <div id="gradientGen">
+        <h1 style="background: radial-gradient(circle, #ff0000, #0000ff, #000000);">Gradient Generator</h1>
+        <div class="gradient-preview" id="gradientPreview"></div>
+
+        <div class="controls">
+          <label for="color1">Color 1:</label>
+          <input type="color" id="color1" value="#ff0000">
+      
+          <label for="color2">Color 2:</label>
+          <input type="color" id="color2" value="#0000ff">
+      
+          <label for="gradientType">Type:</label>
+          <select id="gradientType">
+            <option value="linear">Linear</option>
+            <option value="radial">Radial</option>
+          </select>
+      
+          <label for="direction">Direction (degrees):</label>
+          <input type="text" id="direction" value="90" placeholder="e.g., 90 for linear gradients">
+        </div>
+      
+        <button onclick="generateGradient()">Generate Gradient</button>
+        <br>
+        <br>
+        <div class="text-wrap">
+        <textarea style="width: 99%; height: 8vh;" id="cssCode" readonly></textarea>
+        <div id="copyToClipboard-b" class="clipboard icon"></div>
+        </div> 
+    </div>
+    <br>
+    <hr id="formattere">
+    <div id="formatter">
+            <h1>HTML Formatter</h1>
+            <textarea id="input-code" placeholder="Enter your HTML code here"></textarea>
+            <button id="format-btn">Format Code</button>
+            <br>
+            <br>
+            <label class="output-label">Formatted HTML:</label>
+            <br>
+            <br>
+            <div class="text-wrap">
+            <textarea id="output-code" readonly></textarea>
+            <div id="copyToClipboard-c" class="clipboard icon"></div>
+        </div>
+    </div>
+    <div class="about-section">
+        <h1>About Us Page</h1>
+        <p>Some text about who we are and what we do.</p>
+        <p>Resize the browser window to see that this page is responsive by the way.</p>
+      </div>
+      
+      <h2 style="text-align:center">Our Team</h2>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="ATHARV.jpg" alt="gyatt" style="width:100%">
+            <div class="container">
+              <h2>Atharv Sharma</h2>
+              <p class="title">CEO & Founder</p>
+              <p>I grind am pro.</p>
+              <p>replyatharv@gmail.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="biddy.png" alt="biddy omlet" style="width:100%">
+            <div class="container">
+              <h2>Biddy Omlet</h2>
+              <p class="title">Art Director</p>
+              <p>Glob Glob look under you if you are reading this on the toilet.. GLob</p>
+              <p>jiggly.skibidi@gmail.com</p>
+              <a href="https://hackclub.slack.com/team/U08372M7D25">
+              <button class="button">Contact</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <img src="breeze.png" alt="Mr breeze" style="width:100%">
+            <div class="container">
+              <h2>Mr Breeze</h2>
+              <p class="title">Designer</p>
+              <p>Vote for this project to get a chance to win 100mil $.</p>
+              <p>mr.beastcravingfor.feastables@gmail.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
